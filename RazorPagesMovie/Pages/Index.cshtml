@@ -1,0 +1,49 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<div class="border bg-light m-3 p-3">
+    <h3>GET Form</h3>
+    <form method="get" asp-page="/Privacy">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" class="form-control" id="age" name="age" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit GET</button>
+    </form>
+</div>
+
+<div class="border bg-light m-3 p-3">
+    <h3>CROSS POST Form</h3>
+    <form method="post" asp-page="/Privacy">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="Name" required>
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" class="form-control" id="age" name="Age" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit CROSS POST</button>
+    </form>
+</div>
+
+<div class="border bg-light m-3 p-3">
+    <h3>POSTBACK Form</h3>
+    <form method="post" asp-page="/Privacy">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="Name" required>
+        </div>
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" class="form-control" id="age" name="Age" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit POSTBACK</button>
+    </form>
+</div>
